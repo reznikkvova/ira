@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title><3</title>
+    <style>
+        .body {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            max-width: 380px;
+            width: 380px;
+            align-items: center;
+            margin: 12px auto;
+            border: 2px solid red;
+            padding: 12px;
+
+        }
+
+        .body.fw {
+            background: url('https://media1.tenor.com/m/IRICD_ySul4AAAAd/fireworks.gif');
+
+        }
+        .body.fw h1, .body.fw h2 {
+            color: white !important;
+        }
+        * {
+            box-sizing: border-box;
+        }
+
+        h1, h2 {
+            color: #333;
+            text-align: center;
+        }
+
+        button  {
+            background: red;
+            outline: none;
+            color: white;
+            font-weight: 600;
+            border: none;
+            font-size: 16px;
+            border-radius: 3px;
+            padding: 12px 18px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+   <div class="body">
+       <h1>Ірррааа, з днем народження, сонечко ❤️</h1>
+       <h2>Я тебе дуже люблю</h2>
+       <button id="button1">Натисни на кнопку</button>
+       <h2 class="button1" style="display: none">Ну дуже дуже люблю</h2>
+       <button id="button2" style="display: none">Натисни знов на кнопку</button>
+       <h2 class="button2" style="display: none">Всьо тобі самого самого найкращого</h2>
+   </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            document.getElementById('button1').addEventListener('click', () => {
+                document.querySelector('.button1').style.display = 'block';
+                document.querySelector('#button2').style.display = 'block';
+                document.getElementById('button1').style.display = 'none';
+            });
+
+            document.getElementById('button2').addEventListener('click', () => {
+                document.querySelector('.button2').style.display = 'block';
+                document.querySelector('#button2').style.display = 'none';
+                document.querySelector('.body').classList.add('fw')
+            })
+        })
+    </script>
+</body>
+</html>
